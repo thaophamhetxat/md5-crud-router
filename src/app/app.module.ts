@@ -8,6 +8,7 @@ import { ProductCreateComponent } from './product/product-create/product-create.
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { ProductEditComponent } from './product/product-edit/product-edit.component';
 import { CategoryListComponent } from './category/category-list/category-list.component';
+import  {NavBarComponent} from './shared/nav-bar/nav-bar.component'
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CategoryListComponent } from './category/category-list/category-list.co
     ProductListComponent,
     ProductCreateComponent,
     ProductEditComponent,
-    CategoryListComponent
+    CategoryListComponent,
+    NavBarComponent
 
   ],
   imports: [
