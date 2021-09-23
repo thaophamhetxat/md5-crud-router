@@ -1,0 +1,20 @@
+<div class="container">
+  <h1>Danh sách Thể loại</h1><span><a routerLink="/category/create">Thêm mới</a></span>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <td>STT</td>
+      <td>Tên</td>
+      <td>Action</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let category of  categories;index as i">
+      <td>{{i + 1}}</td>
+      <td>{{category.name}}</td>
+      <td><button (click)="deleteCategory(category.id)" type="button" class="btn btn-secondary">Delete</button></td>
+      <td><a [routerLink]="['/category/edit',category.id]">Edit</a></td>
+    </tr>
+    </tbody>
+  </table>
+</div>

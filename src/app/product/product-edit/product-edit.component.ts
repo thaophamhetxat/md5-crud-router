@@ -18,9 +18,7 @@ export class ProductEditComponent implements OnInit {
               private router: Router) {
     this.activatedRoute.paramMap.subscribe((paramMap: ParamMap) => {
       this.id = parseInt(<string>paramMap.get('id'));
-      console.log(this.id);
       const product = this.getProduct(this.id);
-      console.log(product);
       this.productForm = new FormGroup({
         id: new FormControl(product?.id),
         name: new FormControl(product?.name),
@@ -44,6 +42,5 @@ export class ProductEditComponent implements OnInit {
     this.productService.updateProduct(id, product);
     alert('Cập nhật thành công');
     this.router.navigate(['/product/list']);
-
   }
 }
